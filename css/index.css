@@ -1,0 +1,92 @@
+/*
+* @Author: Mr_yu
+* @Date:   2018-08-13 14:47:59
+* @Last Modified by:   admin
+* @Last Modified time: 2018-08-13 16:34:19
+*/
+html,body,.bg-box,h1,ul,li{
+	padding: 0px;
+	margin: 0px;
+}
+ul,li{
+	list-style: none;
+}
+html,body,.bg-box,.bg-page{
+	height: 100%;
+	width: 100%;
+}
+body{
+	background: url('../images/bg.jpg') no-repeat;
+	background-size: 100%;
+}
+.bg-box{
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+	background-size: 100%;
+	overflow: hidden;
+}
+.bg-page{
+	position: absolute;
+}
+.bg-page>li{
+	width: 100%;
+	height: 100%;
+}
+.page1 h1{
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+}
+.point{
+	position: absolute;
+	height: 200px;
+	left: 50%;
+	bottom: 0px;
+}
+.point>li{
+	width: 20px;
+	height: 20px;
+	border: 2px solid white;
+	border-radius: 50%;
+	margin: 10px auto;
+}
+.point>li:nth-of-type(1){
+	width: 10px;
+	height: 10px;
+}
+.point>li:nth-of-type(2){
+	width: 13px;
+	height: 13px;
+}
+.point>li:nth-of-type(3){
+	width: 16px;
+	height: 16px;
+}
+.point>li:nth-of-type(4){
+	width: 19px;
+	height: 19px;
+}
+.point>li:nth-of-type(5){
+	width: 22px;
+	height: 22px;
+}
+.active{
+	animation: myfrist 2s;
+	-webkit-animation:myfirst 2s infinite;
+}
+.bg-box .head{
+	color: #dedede;
+}
+@keyframes myfirst{
+	0%{box-shadow:0px 0px 2px 0px #ffffff;}
+	50%{box-shadow: 0px 0px 12px 3px #fff;}
+	100%{box-shadow:0px 0px 2px 0px #ffffff;}
+}
+@-webkit-keyframes myfirst{
+	0%{box-shadow:0px 0px 2px 0px #ffffff;}
+	50%{box-shadow: 0px 0px 12px 3px #fff;}
+	100%{box-shadow:0px 0px 2px 0px #ffffff;}
+	
+}

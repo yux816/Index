@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+</head>
+<body>
+	<div class="bg-box">
+		<ul class="bg-page">
+			<li class="page1">
+				<h1 class="head animated bounceInDown">Wellcome to Myhome</h1>
+				<ul class="point">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</li>
+			<li class="page2">
+				<h1 class="head">Wellcome to Myhome</h1>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+<script src='js/jquery-2.1.4.min.js'></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script>
+	$(window).mousewheel(function(event, delta, deltaX, deltaY){
+		if (delta<0) {
+			$('.bg-page').stop().animate({"top":"-100%"},1000);
+		}else if(delta>0){
+			$('.bg-page').stop().animate({"top":"0"},1000);
+		}
+				
+	})
+	
+	var num = 1
+	setInterval(function(){
+		$('.point li').eq(num).addClass('active');
+		$('.point li').eq(num).siblings().removeClass('active');
+		if(num>3) num=-1;
+		num++;
+	},3000)
+	
+	
+</script>
+</html>
